@@ -90,6 +90,39 @@ Forge (the architecture agent) has produced complete requirements and architectu
 ## Collaboration
 
 - This folder (`/ai_bots/real_estate/`) is the shared workspace between OpenClaw and Claude Code
-- Gizmo (OpenClaw) can read/write files here for coordination
-- Write progress notes or blockers to `CONTEXT.md` or a new `STATUS.md` file as you go
+- Gizmo (OpenClaw) + Forge can read/write files here for coordination
 - The `output/` directory is where human-readable results land — Gizmo will check there
+
+---
+
+## Status Updates (Important)
+
+Forge (OpenClaw's infrastructure agent) monitors this project and relays updates to Chris. **Write a status update to `STATUS.md` at these checkpoints:**
+
+1. **Session start** — what you're about to work on
+2. **Milestone complete** — any stage that finishes (e.g., "ingest_parcels.py done")
+3. **Blocked** — you hit a problem or need a decision from Chris
+4. **Session end** — summary of what was done, what's next
+
+### STATUS.md Format
+
+```markdown
+# Boat Storage Facility Finder — Status
+
+**Updated:** YYYY-MM-DDTHH:MM:SSZ
+**Status:** 🟢 Working | 🟡 Needs Input | 🔴 Blocked | ✅ Done
+**Current Task:** [one line]
+
+## Progress This Session
+- [completed item]
+
+## Blockers / Questions
+- [None] OR [specific question]
+
+## Up Next
+- [next task]
+```
+
+**Always update the `Updated:` timestamp** — Forge uses it to detect new updates.
+
+Full protocol: `/ai_bots/shared/STATUS_PROTOCOL.md`
